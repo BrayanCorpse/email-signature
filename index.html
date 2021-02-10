@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email - Signature</title>
+    
+    <link rel="stylesheet" href="css/spectre.min.css">
+    <link rel="stylesheet" href="css/spectre-exp.min.css">
+    <link rel="stylesheet" href="css/spectre-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+</head>
+<body>
+
+    <div class="hero hero-sm bg-gray" id="hero">
+        <div class="hero-body">
+          <header class="navbar">
+            <section class="navbar-section">
+              <a href="#" class="btn btn-link">
+                <i class="fa fab fa-github fa-lg" aria-hidden="true"></i>
+              </a>
+            </section>
+            <section class="navbar-center">
+              <a href="#" onclick="myFunction()">
+                <img className="img-responsive" src="img/eclipse.svg" id="mode" alt="mode" width="50" height="50"/>
+              </a>
+            </section>
+            <section class="navbar-section">
+              <a href="#" class="btn btn-link">
+                <i class="fa fab fa-twitter fa-lg" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="btn btn-link">
+                <i class="fa fab fa-instagram fa-lg" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="btn btn-link">
+                <i class="fa fab fa-youtube fa-lg" aria-hidden="true"></i>
+              </a>
+            </section>
+          </header>
+        </div>
+    </div>
+
+    <ul class="step">
+        <li class="step-item">
+          <a href="#" class="tooltip" data-tooltip="Step 1">
+            <i class="icon icon-edit"></i>
+          </a>
+        </li>
+        <li class="step-item">
+          <a href="#" class="tooltip" data-tooltip="Step 2">
+            <i class="icon icon-photo"></i>
+          </a>
+        </li>
+        <li class="step-item">
+          <a href="#" class="tooltip" data-tooltip="Step 3">
+            <i class="icon icon-people"></i>
+          </a>
+        </li>
+    </ul>
+    
+
+    <div class="container text-center mt-2">
+        <h1>Completa la información de tu firma</h1>
+        <small class="label">Estos datos serán los que vean las personas que reciban tus mails</small>
+    </div>
+
+    <br>
+
+    <div class="container mt-2">
+        <div class="columns">
+          <div class="column col-xs-3"></div>
+
+          <div class="column col-6">
+            <div class="form-group">
+
+                <label class="form-label text-bold" for="input-example-1">Elige tu perfil</label>
+                <label class="form-radio form-inline">
+                    <input type="radio" name="perfil" checked=""><i class="form-icon"></i> Emprendedor
+                </label>
+                <label class="form-radio form-inline">
+                    <input type="radio" name="perfil"><i class="form-icon"></i> Estudiante
+                </label>
+                <label class="form-radio form-inline">
+                    <input type="radio" name="perfil"><i class="form-icon"></i> Profesional
+                </label>
+
+                <br>
+
+                <label class="form-label text-bold" for="input-example-1">Ingresa tus datos</label>
+
+                <div class="columns">
+                    <div class="column col-6">
+                        <label class="form-label" for="input-example-1">Name</label>
+                        <input class="form-input" type="text" id="name" placeholder="Alexys Lozada">
+                    </div>
+                    <div class="column col-6">
+                        <label class="form-label" for="input-example-1">Description</label>
+                        <input class="form-input" type="text" id="desc" placeholder="Ceo Bradia">
+                    </div>
+                    <div class="column col-6">
+                        <label class="form-label" for="input-example-1">Phone</label>
+                        <input class="form-input" type="text" id="phone" placeholder="+52 1234567890">
+                    </div>
+                    <div class="column col-6">
+                        <label class="form-label" for="input-example-1">Location</label>
+                        <input class="form-input" type="text" id="location" placeholder="México">
+                    </div>
+                </div>
+
+                <label class="form-label text-bold mt-2" for="input-example-1">Elige tu tema</label>
+
+                <label class="orange">
+                  <input type="radio" name="color" value="orange">
+                  <div class="layer"></div>
+                  <div class="button"><span></span></div>
+                </label>
+                
+                <label class="amber">
+                  <input type="radio" name="color" value="amber">
+                  <div class="layer"></div>
+                  <div class="button"><span></span></div>
+                </label>
+                
+                <label class="lime">
+                  <input type="radio" name="color" value="lime">
+                  <div class="layer"></div>
+                  <div class="button"><span></span></div>
+                </label>
+                
+                <label class="teal">
+                  <input type="radio" name="color" value="teal">
+                  <div class="layer"></div>
+                  <div class="button"><span></span></div>
+                </label>
+                
+                <label class="blue">
+                  <input type="radio" name="color" value="blue">
+                  <div class="layer"></div>
+                  <div class="button"><span></span></div>
+                </label>
+                
+                <label class="indigo">
+                  <input type="radio" name="color" value="indigo">
+                  <div class="layer"></div>
+                  <div class="button"><span></span></div>
+                </label>   
+
+                <label class="form-label text-bold mt-2" for="input-example-1">
+                  Redes sociales y página web  <small>Elige hasta 5 redes sociales y tu sitio web</small>
+                </label> 
+                
+                <div class="columns">
+                    <div class="column col-12">
+                
+                      <span class="chip btn ">  
+                          <i class="fa fa-linkedin" aria-hidden="true"></i> &nbsp; Linkedin 
+                      </span>
+
+                      <span class="chip btn ">  
+                          <i class="fa fab fa-instagram" aria-hidden="true"></i> &nbsp; Instagram 
+                      </span>
+
+                      <span class="chip btn ">  
+                          <i class="fa fab fa-twitter" aria-hidden="true"></i> &nbsp; Twitter 
+                      </span>
+
+                      <span class="chip btn ">  
+                          <i class="fa fa-github" aria-hidden="true"></i> &nbsp; Linkedin 
+                      </span>
+
+                      <span class="chip btn ">  
+                          <i class="fa fa-window-restore" aria-hidden="true"></i> &nbsp; Sitio Web 
+                      </span>
+  
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="colums mt-2">
+                  <div class="colum col-12">
+                    <button class="btn btn-primary btn-block">Generar Firma</button>
+                  </div>
+                </div>
+
+                
+
+        
+            </div>            
+          </div>
+
+          <div class="column col-xs-3"></div>
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="empty mt-2" id="empty">
+      <div class="empty-icon">
+        <i class="icon icon-mail icon-3x"></i>
+      </div>
+      <p class="empty-title h5">You have no new messages</p>
+      <p class="empty-subtitle">Click the button to start a conversation.</p>
+      <div class="empty-action">
+        <button class="btn btn-primary">Send a message</button>
+      </div>
+    </div>
+
+        
+    <script>
+
+      function myFunction() {
+         let element = document.body;
+         let bg1 = document.getElementById('hero');
+         let bg2 = document.getElementById('empty');
+         let mode = document.getElementById('mode');
+         element.classList.toggle("dark-mode");
+         bg1.classList.toggle("dark-mode");
+         bg2.classList.toggle("dark-mode");
+
+         if(document.body.classList.contains('dark-mode')){
+            mode.src = "img/sun.svg";
+         }
+
+        }
+    
+    </script>
+    
+
+
+</body>
+</html>
