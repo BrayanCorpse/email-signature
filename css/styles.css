@@ -70,3 +70,13 @@ input {
 	background: #303742 !important;
 	color: #F7F8F9;
   }
+
+  .dark-card {
+	background: #393e46 !important;
+	color: #F7F8F9;
+  }
+  .b-avatar {
+    position: relative;
+    top: 8px;
+	font-size: 1.2rem;
+}

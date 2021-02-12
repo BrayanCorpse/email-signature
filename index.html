@@ -16,26 +16,30 @@
     <div class="hero hero-sm bg-gray" id="hero">
         <div class="hero-body">
           <header class="navbar">
-            <section class="navbar-section">
-              <a href="#" class="btn btn-link">
-                <i class="fa fab fa-github fa-lg" aria-hidden="true"></i>
-              </a>
+            <section class="navbar-section">  
+                <a href="#" class="btn btn-link">
+                  <i class="fa fab fa-github fa-lg" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="btn btn-link">
+                  <i class="fa fab fa-twitter fa-lg" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="btn btn-link">
+                  <i class="fa fab fa-instagram fa-lg" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="btn btn-link">
+                  <i class="fa fab fa-youtube fa-lg" aria-hidden="true"></i>
+                </a>
             </section>
             <section class="navbar-center">
-              <a href="#" onclick="myFunction()">
-                <img className="img-responsive" src="img/eclipse.svg" id="mode" alt="mode" width="50" height="50"/>
-              </a>
+                <a href="#" class="btn btn-link">
+                  <i class="fa fab fa-edit fa-lg" aria-hidden="true"></i> Email Signature Generator
+                </a>
             </section>
             <section class="navbar-section">
-              <a href="#" class="btn btn-link">
-                <i class="fa fab fa-twitter fa-lg" aria-hidden="true"></i>
-              </a>
-              <a href="#" class="btn btn-link">
-                <i class="fa fab fa-instagram fa-lg" aria-hidden="true"></i>
-              </a>
-              <a href="#" class="btn btn-link">
-                <i class="fa fab fa-youtube fa-lg" aria-hidden="true"></i>
-              </a>
+                <a href="#" onclick="darkMode()">
+                  <img class="img-responsive" src="img/sun.svg" id="mode" alt="mode" width="50" height="50"/>
+                </a>
+                <button class="btn btn-link">Patreon</button>
             </section>
           </header>
         </div>
@@ -76,13 +80,13 @@
 
                 <label class="form-label text-bold" for="input-example-1">Elige tu perfil</label>
                 <label class="form-radio form-inline">
-                    <input type="radio" name="perfil" checked=""><i class="form-icon"></i> Emprendedor
+                    <input type="radio" name="profile" value="Emprendedor" checked><i class="form-icon"></i> Emprendedor
                 </label>
                 <label class="form-radio form-inline">
-                    <input type="radio" name="perfil"><i class="form-icon"></i> Estudiante
+                    <input type="radio" name="profile" value="Estudiante"><i class="form-icon"></i> Estudiante
                 </label>
                 <label class="form-radio form-inline">
-                    <input type="radio" name="perfil"><i class="form-icon"></i> Profesional
+                    <input type="radio" name="profile" value="Profesional"><i class="form-icon"></i> Profesional
                 </label>
 
                 <br>
@@ -92,11 +96,11 @@
                 <div class="columns">
                     <div class="column col-6">
                         <label class="form-label" for="input-example-1">Name</label>
-                        <input class="form-input" type="text" id="name" placeholder="Alexys Lozada">
+                        <input class="form-input" type="text" id="name" placeholder="Alexys Lozada" onkeyup="capitalletters(this)">
                     </div>
                     <div class="column col-6">
                         <label class="form-label" for="input-example-1">Description</label>
-                        <input class="form-input" type="text" id="desc" placeholder="Ceo Bradia">
+                        <input class="form-input" type="text" id="desc" placeholder="Ceo Bradia" onkeyup="capitalletters(this)"> 
                     </div>
                     <div class="column col-6">
                         <label class="form-label" for="input-example-1">Phone</label>
@@ -106,46 +110,54 @@
                         <label class="form-label" for="input-example-1">Location</label>
                         <input class="form-input" type="text" id="location" placeholder="México">
                     </div>
+                    <div class="column col-6">
+                      <label class="form-label" for="input-example-1">Sitio Web</label>
+                      <input class="form-input" type="text" id="web" placeholder="hola.dev">
+                  </div>
+                  <div class="column col-6">
+                    <label class="form-label" for="input-example-1">Linkedin</label>
+                    <input class="form-input" type="text" id="linkedin" placeholder="brayan-manzano-54b309129">
+                </div>
                 </div>
 
                 <label class="form-label text-bold mt-2" for="input-example-1">Elige tu tema</label>
 
                 <label class="orange">
-                  <input type="radio" name="color" value="orange">
+                  <input type="radio" name="color" value="#FF5722">
                   <div class="layer"></div>
                   <div class="button"><span></span></div>
                 </label>
                 
                 <label class="amber">
-                  <input type="radio" name="color" value="amber">
+                  <input type="radio" name="color" value="#FFC107">
                   <div class="layer"></div>
                   <div class="button"><span></span></div>
                 </label>
                 
                 <label class="lime">
-                  <input type="radio" name="color" value="lime">
+                  <input type="radio" name="color" value="#8BC34A">
                   <div class="layer"></div>
                   <div class="button"><span></span></div>
                 </label>
                 
                 <label class="teal">
-                  <input type="radio" name="color" value="teal">
+                  <input type="radio" name="color" value="#009688">
                   <div class="layer"></div>
                   <div class="button"><span></span></div>
                 </label>
                 
                 <label class="blue">
-                  <input type="radio" name="color" value="blue">
+                  <input type="radio" name="color" value="#2196F3">
                   <div class="layer"></div>
                   <div class="button"><span></span></div>
                 </label>
                 
                 <label class="indigo">
-                  <input type="radio" name="color" value="indigo">
+                  <input type="radio" name="color" value="#3F51B5" checked>
                   <div class="layer"></div>
                   <div class="button"><span></span></div>
                 </label>   
-
+<!-- 
                 <label class="form-label text-bold mt-2" for="input-example-1">
                   Redes sociales y página web  <small>Elige hasta 5 redes sociales y tu sitio web</small>
                 </label> 
@@ -153,8 +165,8 @@
                 <div class="columns">
                     <div class="column col-12">
                 
-                      <span class="chip btn ">  
-                          <i class="fa fa-linkedin" aria-hidden="true"></i> &nbsp; Linkedin 
+                      <span class="chip btn" onclick="socialSites()">  
+                          <i class="fa fa-linkedin" aria-hidden="true" id="linkedin"></i> &nbsp; Linkedin 
                       </span>
 
                       <span class="chip btn ">  
@@ -166,7 +178,7 @@
                       </span>
 
                       <span class="chip btn ">  
-                          <i class="fa fa-github" aria-hidden="true"></i> &nbsp; Linkedin 
+                          <i class="fa fa-github" aria-hidden="true"></i> &nbsp; Github 
                       </span>
 
                       <span class="chip btn ">  
@@ -174,21 +186,31 @@
                       </span>
   
                     </div>
-                </div>
+                      
+                    </div>
+                </div> -->
 
+                <br>
                 <br>
 
                 <div class="colums mt-2">
                   <div class="colum col-12">
-                    <button class="btn btn-primary btn-block">Generar Firma</button>
+                    <button class="btn btn-primary btn-block" onclick="fileGenerator()">Generar Firma</button>
                   </div>
                 </div>
 
-                
+                <br>
 
-        
+                <div class="container" id="generate">
+                  <div class="columns">
+                    <div class="column col-6 col-mx-auto">
+                      <section class="mt-2" id="signature"></section>
+                    </div>
+                  </div>
+                </div>
+
             </div>            
-          </div>
+          </div>  
 
           <div class="column col-xs-3"></div>
         </div>
@@ -208,27 +230,8 @@
       </div>
     </div>
 
-        
-    <script>
-
-      function myFunction() {
-         let element = document.body;
-         let bg1 = document.getElementById('hero');
-         let bg2 = document.getElementById('empty');
-         let mode = document.getElementById('mode');
-         element.classList.toggle("dark-mode");
-         bg1.classList.toggle("dark-mode");
-         bg2.classList.toggle("dark-mode");
-
-         if(document.body.classList.contains('dark-mode')){
-            mode.src = "img/sun.svg";
-         }
-
-        }
-    
-    </script>
-    
-
+    <script src="js/clipboard.min.js"></script>
+    <script src="js/index.js"></script>
 
 </body>
 </html>
