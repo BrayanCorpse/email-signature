@@ -62,7 +62,7 @@ function fileGenerator(){
       <div class="tile-content">
         <div class="tile-title text-bold">Web site</div>
         <div class="tile-subtitle">
-         <a href="${web}" rel="noopener noreferrer" target="_blank" style="color: ${color};">${web}</a> 
+         <a href="${web}"  target="_blank" style="color: ${color};">${web}</a> 
         </div>
       </div>
       <div class="tile-action">
