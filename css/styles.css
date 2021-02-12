@@ -84,3 +84,9 @@ input {
 .fa-heart {
 	color: #5755D9;
 }
+
+@media (max-width: 480px){
+	.col-6 {
+		width: 100%;
+	}
+}

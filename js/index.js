@@ -24,7 +24,7 @@ function fileGenerator(){
   let color = document.querySelector('input[name="color"]:checked').value;
 
   document.getElementById('signature').innerHTML = 
-  `<div class="panel">
+  `<div class="panel" style="border: .1rem solid ${color};">
   <div class="panel-header text-center">
     <figure class="avatar avatar-lg" style="background-color: ${color};">
       <h6 class="b-avatar">${nickname}</h6>
@@ -62,7 +62,7 @@ function fileGenerator(){
       <div class="tile-content">
         <div class="tile-title text-bold">Web site</div>
         <div class="tile-subtitle">
-         <a href="${web}" rel="noopener noreferrer" target="_blank">${web}</a> 
+         <a href="${web}" rel="noopener noreferrer" target="_blank" style="color: ${color};">${web}</a> 
         </div>
       </div>
       <div class="tile-action">
