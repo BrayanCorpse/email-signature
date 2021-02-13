@@ -2,7 +2,7 @@ let clipboard = new Clipboard('.btn');
 
 clipboard.on('success', function(e) {
 	let copy = document.getElementById('copy');
-  copy.innerHTML = "Copied!";
+  copy.innerHTML = "Copiado!";
   copy.classList.toggle("btn-primary");
 });
 
@@ -84,7 +84,7 @@ function fileGenerator(){
   </div>
 </div>
 <br>
-<button class="btn btn-default btn-block" data-clipboard-target="#generate" id="copy">Copy</button>`;
+<button class="btn btn-default btn-block" data-clipboard-target="#generate" id="copy">Copiar</button>`;
 
 }
 
