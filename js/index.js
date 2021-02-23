@@ -1,3 +1,11 @@
+// let language = navigator.language || navigator.browserLanguage;
+// if (language === 'en-US') {
+//   alert("el idioma es Ingles");
+// }
+// else {
+//   alert("el idioma es Español")
+// }
+
 let clipboard = new Clipboard('.btn');
 
 clipboard.on('success', function(e) {
@@ -114,9 +122,13 @@ function capitalletters(e){
 
 }
 
-// function socialSites(){
-//     let link = document.getElementById('link').innerHTML = '<div class="has-icon-left"><input class="form-input" type="text" id="linkedin" placeholder="Linkedin"><i class="fa fa-linkedin form-icon" aria-hidden="true" id="linkedin"></i></div>';
-// }
+function socialSites(){
+    let link = document.getElementById('face').innerHTML = 
+    `<div class="has-icon-left">
+      <input class="form-input" type="text" id="facebook" placeholder="facebook">
+      <i class="fa fa-facebook fa-lg form-icon" aria-hidden="true" id="linkedin"></i>
+    </div>`;
+}
 
 
 

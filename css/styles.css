@@ -81,8 +81,12 @@ input {
 	font-size: 1.2rem;
 }
 
-.fa-heart {
+.fa {
 	color: #5755D9;
+}
+
+.video-responsive {
+	border: 3px solid #5755D9;
 }
 
 @media (max-width: 480px){
@@ -90,3 +94,4 @@ input {
 		width: 100%;
 	}
 }
+
