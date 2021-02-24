@@ -122,12 +122,100 @@ function capitalletters(e){
 
 }
 
-function socialSites(){
-    let link = document.getElementById('face').innerHTML = 
-    `<div class="has-icon-left">
-      <input class="form-input" type="text" id="facebook" placeholder="facebook">
-      <i class="fa fa-facebook fa-lg form-icon" aria-hidden="true" id="linkedin"></i>
+const facebook = () => {
+    document.getElementById('face').innerHTML = 
+    `<br>
+    <div class="input-group">
+      <span class="input-group-addon">
+        <i class="fa fa-facebook fa-lg form-icon" aria-hidden="true"></i>
+        facebook.com/
+      </span> 
+      <input class="form-input" type="text" id="facebook" placeholder="bryan.manzanocortes">
+      <button class="btn btn-primary input-group-btn" onclick="rmfacebook()">
+        <i class="form-icon icon icon-cross"></i>
+      </button>
     </div>`;
+}
+
+const rmfacebook = () => {
+    document.getElementById('face').innerHTML = "";
+}
+
+const instagram = () => {
+  document.getElementById('insta').innerHTML = 
+  `<br>
+  <div class="input-group">
+    <span class="input-group-addon">
+      <i class="fa fa-instagram fa-lg form-icon" aria-hidden="true"></i>
+      instagram.com/
+    </span> 
+    <input class="form-input" type="text" id="instagram" placeholder="bryan.devcode">
+    <button class="btn btn-primary input-group-btn" onclick="rminstagram()">
+      <i class="form-icon icon icon-cross"></i>
+    </button>
+  </div>`;
+}
+
+const rminstagram = () => {
+  document.getElementById('insta').innerHTML = "";
+}
+
+
+const twitter = () => {
+  document.getElementById('twi').innerHTML = 
+  `<br>
+  <div class="input-group">
+    <span class="input-group-addon">
+      <i class="fa fa-twitter fa-lg form-icon" aria-hidden="true"></i>
+      twitter.com/
+    </span> 
+    <input class="form-input" type="text" id="twitter" placeholder="BrayanCorpsee">
+    <button class="btn btn-primary input-group-btn" onclick="rmtwitter()">
+      <i class="form-icon icon icon-cross"></i>
+    </button>
+  </div>`;
+}
+
+const rmtwitter = () => {
+  document.getElementById('twi').innerHTML = "";
+}
+
+const youtube = () => {
+  document.getElementById('you').innerHTML = 
+  `<br>
+  <div class="input-group">
+    <span class="input-group-addon">
+      <i class="fa fa-youtube-play fa-lg form-icon" aria-hidden="true"></i>
+      youtube.com/
+    </span> 
+    <input class="form-input" type="text" id="youtube" placeholder="channel">
+    <button class="btn btn-primary input-group-btn" onclick="rmyoutube()">
+      <i class="form-icon icon icon-cross"></i>
+    </button>
+  </div>`;
+}
+
+const rmyoutube = () => {
+  document.getElementById('you').innerHTML = "";
+}
+
+const github = () => {
+  document.getElementById('git').innerHTML = 
+  `<br>
+  <div class="input-group">
+    <span class="input-group-addon">
+      <i class="fa fa-github fa-lg form-icon" aria-hidden="true"></i>
+      github.com/
+    </span> 
+    <input class="form-input" type="text" id="github" placeholder="BrayanCorpse">
+    <button class="btn btn-primary input-group-btn">
+      <i class="form-icon icon icon-cross" onclick="rmgithub()"></i>
+    </button>
+  </div>`;
+}
+
+const rmgithub = () => {
+  document.getElementById('git').innerHTML = "";
 }
 
 
