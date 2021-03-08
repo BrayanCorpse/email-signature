@@ -6,6 +6,18 @@
 //   alert("el idioma es Español")
 // }
 
+let face;
+
+let insta;
+
+let twitt;
+
+let you;
+
+let git;
+
+
+
 let clipboard = new Clipboard('.btn');
 
 clipboard.on('success', function(e) {
@@ -17,7 +29,6 @@ clipboard.on('success', function(e) {
 clipboard.on('error', function(e) {
 	console.log(e);
 });
-
 
 function fileGenerator(){
 
@@ -54,7 +65,9 @@ function fileGenerator(){
         <div class="tile-subtitle">${phone}</div>
       </div>
       <div class="tile-action">
-        <button class="btn btn-link btn-action btn-lg tooltip tooltip-left" data-tooltip="Phone" style="color: ${color};"><i class="fa fa-phone" aria-hidden="true"></i></button>
+        <button class="btn btn-link btn-action btn-lg tooltip tooltip-left" data-tooltip="Phone">
+          <i class="fa fa-phone" aria-hidden="true" style="color: ${color};"></i>
+        </button>
       </div>
     </div>
     <div class="tile tile-centered">
@@ -63,7 +76,9 @@ function fileGenerator(){
         <div class="tile-subtitle">${location}</div>
       </div>
       <div class="tile-action">
-        <button class="btn btn-link btn-action btn-lg tooltip tooltip-left"  data-tooltip="Location" style="color: ${color};"><i class="icon icon-location"></i></button>
+        <button class="btn btn-link btn-action btn-lg tooltip tooltip-left"  data-tooltip="Location">
+          <i class="icon icon-location" style="color: ${color};"></i>
+        </button>
       </div>
     </div>
     <div class="tile tile-centered">
@@ -74,17 +89,43 @@ function fileGenerator(){
         </div>
       </div>
       <div class="tile-action">
-        <button class="btn btn-link btn-action btn-lg tooltip tooltip-left"  data-tooltip="Web-site" style="color: ${color};"><i class="icon icon-link"></i></button>
+        <button class="btn btn-link btn-action btn-lg tooltip tooltip-left"  data-tooltip="Web-site">
+          <i class="icon icon-link" style="color: ${color};"></i>
+        </button>
       </div>
     </div>
-    <div class="tile tile-centered mb-1">
+    <div class="tile tile-centered">
       <div class="tile-content">
         <div class="tile-title text-bold">Linkedin</div>
         <div class="tile-subtitle">${linkedin}</div>
       </div>
       <div class="tile-action">
-        <button class="btn btn-link btn-action btn-lg tooltip tooltip-left"  data-tooltip="Linkedin" style="color: ${color};"><i class="fa fa-linkedin" aria-hidden="true"></i></button>
+        <button class="btn btn-link btn-action btn-lg tooltip tooltip-left"  data-tooltip="Linkedin">
+          <i class="fa fa-linkedin" aria-hidden="true" style="color: ${color};"></i>
+        </button>
       </div>
+    </div>
+    <div class="tile tile-centered mb-1">
+      <div class="tile-content">
+        <div class="tile-title text-bold">social media</div>
+      </div>
+    </div>
+    <div class="tile-action text-center">
+      <a href="${face}" class="mr-2">
+        <img src="https://i.ibb.co/NxyZDjz/face.png" alt="" width="20" height="20">
+      </a>
+      <a href="${insta}" class="mr-2">
+        <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+      </a>
+      <a href="${twitt}" class="mr-2">
+        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+      </a>
+      <a href="${you}" class="mr-2">
+        <i class="fa fa-youtube-play fa-lg" aria-hidden="true"></i>
+      </a>
+      <a href="${git}">
+        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+      </a>
     </div>
   </div>
   <div class="panel-footer">
@@ -93,6 +134,7 @@ function fileGenerator(){
 </div>
 <br>
 <button class="btn btn-default btn-block" data-clipboard-target="#generate" id="copy">Copiar</button>`;
+
 
 }
 
@@ -130,7 +172,7 @@ const facebook = () => {
         <i class="fa fa-facebook fa-lg form-icon" aria-hidden="true"></i>
         facebook.com/
       </span> 
-      <input class="form-input" type="text" id="facebook" placeholder="bryan.manzanocortes">
+      <input class="form-input social" type="text" id="facebook" placeholder="bryan.manzanocortes">
       <button class="btn btn-primary input-group-btn" onclick="rmfacebook()">
         <i class="form-icon icon icon-cross"></i>
       </button>
@@ -149,7 +191,7 @@ const instagram = () => {
       <i class="fa fa-instagram fa-lg form-icon" aria-hidden="true"></i>
       instagram.com/
     </span> 
-    <input class="form-input" type="text" id="instagram" placeholder="bryan.devcode">
+    <input class="form-input social" type="text" id="instagram" placeholder="bryan.devcode">
     <button class="btn btn-primary input-group-btn" onclick="rminstagram()">
       <i class="form-icon icon icon-cross"></i>
     </button>
@@ -169,7 +211,7 @@ const twitter = () => {
       <i class="fa fa-twitter fa-lg form-icon" aria-hidden="true"></i>
       twitter.com/
     </span> 
-    <input class="form-input" type="text" id="twitter" placeholder="BrayanCorpsee">
+    <input class="form-input social" type="text" id="twitter" placeholder="BrayanCorpsee">
     <button class="btn btn-primary input-group-btn" onclick="rmtwitter()">
       <i class="form-icon icon icon-cross"></i>
     </button>
@@ -188,7 +230,7 @@ const youtube = () => {
       <i class="fa fa-youtube-play fa-lg form-icon" aria-hidden="true"></i>
       youtube.com/
     </span> 
-    <input class="form-input" type="text" id="youtube" placeholder="channel">
+    <input class="form-input social" type="text" id="youtube" placeholder="channel">
     <button class="btn btn-primary input-group-btn" onclick="rmyoutube()">
       <i class="form-icon icon icon-cross"></i>
     </button>
@@ -200,14 +242,14 @@ const rmyoutube = () => {
 }
 
 const github = () => {
-  document.getElementById('git').innerHTML = 
+  document.getElementById('git').innerHTML += 
   `<br>
   <div class="input-group">
     <span class="input-group-addon">
       <i class="fa fa-github fa-lg form-icon" aria-hidden="true"></i>
       github.com/
     </span> 
-    <input class="form-input" type="text" id="github" placeholder="BrayanCorpse">
+    <input class="form-input social" type="text" id="github" placeholder="BrayanCorpse" name="github">
     <button class="btn btn-primary input-group-btn">
       <i class="form-icon icon icon-cross" onclick="rmgithub()"></i>
     </button>
@@ -217,6 +259,23 @@ const github = () => {
 const rmgithub = () => {
   document.getElementById('git').innerHTML = "";
 }
+
+// const Getgithub = (e) => {
+//   git = e.value;
+//   }
+
+
+// const Capturar = () => {
+//     let arraySave = [];   
+//     let Social = document.getElementsByClassName("social");     
+//     for (var i = 0; i < Social.length; i++) {    
+//         arraySave[i] = Social[i].value;
+//         console.log (arraySave[i]); 
+//         document.getElementById('social').innerHTML += arraySave[i] + '<br>';     
+//         }       
+//     }
+
+
 
 
 

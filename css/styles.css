@@ -93,6 +93,9 @@ input {
 	color: #5755D9 !important;
 }
 
+.tile-action a {
+	text-decoration: none !important;
+}
 @media (max-width: 480px){
 	.col-6 {
 		width: 100%;
@@ -104,5 +107,9 @@ input {
 	.my-col {
 		width: 60%;
 	}
+
+	/* .col-sign {
+		width: 52% !important;
+	} */
 }
 
