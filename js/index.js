@@ -173,7 +173,7 @@ function fileGenerator(){
         <div class="tile-subtitle">${phone}</div>
       </div>
       <div class="tile-action">
-        <img src="/img/phone.png" alt="" width="30" height="30" style="background: ${color};">
+        <img src="img/phone.png" alt="" width="30" height="30" style="background: ${color};">
       </div>
     </div>
     <div class="tile tile-centered">
@@ -182,7 +182,7 @@ function fileGenerator(){
         <div class="tile-subtitle">${location}</div>
       </div>
       <div class="tile-action">
-        <img src="/img/location.png" alt="" width="30" height="30" style="background: ${color};">
+        <img src="img/location.png" alt="" width="30" height="30" style="background: ${color};">
       </div>
     </div>
     <div class="tile tile-centered">
@@ -193,7 +193,7 @@ function fileGenerator(){
         </div>
       </div>
       <div class="tile-action">
-        <img src="/img/web.png" alt="" width="30" height="30" style="background: ${color};">
+        <img src="img/web.png" alt="" width="30" height="30" style="background: ${color};">
       </div>
     </div>
     <div class="tile tile-centered">
@@ -202,7 +202,7 @@ function fileGenerator(){
         <div class="tile-subtitle">${linkedin}</div>
       </div>
       <div class="tile-action">
-      <img src="/img/linkedin.png" alt="" width="30" height="30" style="background: ${color};">
+      <img src="img/linkedin.png" alt="" width="30" height="30" style="background: ${color};">
     </div>
     </div>
     <div class="tile tile-centered mb-1">
@@ -224,7 +224,7 @@ function fileGenerator(){
 document.getElementById('social-links').innerHTML =
 `${face 
   ? `<a href="${face}" rel="noopener noreferrer" target="_blank">
-      <img src="/img/face.png" alt="" width="25" height="25" style="background: ${color};">
+      <img src="img/face.png" alt="" width="25" height="25" style="background: ${color};">
     </a>`
   : ''}`;
 
