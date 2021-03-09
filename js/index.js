@@ -69,7 +69,7 @@ document.getElementById('insta').innerHTML =
     <i class="fa fa-instagram fa-lg form-icon" aria-hidden="true"></i>
     instagram.com/
   </span> 
-  <input class="form-input social" type="text" id="instagram" placeholder="bryan.devcode">
+  <input class="form-input social" type="text" id="instagram" placeholder="bryan.devcode" onkeyup="Getinstagram(this)">
   <button class="btn btn-primary input-group-btn" onclick="rminstagram()">
     <i class="form-icon icon icon-cross"></i>
   </button>
@@ -80,6 +80,10 @@ const rminstagram = () => {
 document.getElementById('insta').innerHTML = "";
 }
 
+const Getinstagram = (e) => {
+  insta = 'https://www.instagram.com/'+e.value;
+  }
+
 
 const twitter = () => {
 document.getElementById('twi').innerHTML = 
@@ -89,7 +93,7 @@ document.getElementById('twi').innerHTML =
     <i class="fa fa-twitter fa-lg form-icon" aria-hidden="true"></i>
     twitter.com/
   </span> 
-  <input class="form-input social" type="text" id="twitter" placeholder="BrayanCorpsee">
+  <input class="form-input social" type="text" id="twitter" placeholder="BrayanCorpsee" onkeyup="Gettwitter(this)">
   <button class="btn btn-primary input-group-btn" onclick="rmtwitter()">
     <i class="form-icon icon icon-cross"></i>
   </button>
@@ -100,6 +104,11 @@ const rmtwitter = () => {
 document.getElementById('twi').innerHTML = "";
 }
 
+const Gettwitter = (e) => {
+  twitt = 'https://twitter.com/'+e.value;
+  }
+
+
 const youtube = () => {
 document.getElementById('you').innerHTML = 
 `<br>
@@ -108,7 +117,8 @@ document.getElementById('you').innerHTML =
     <i class="fa fa-youtube-play fa-lg form-icon" aria-hidden="true"></i>
     youtube.com/
   </span> 
-  <input class="form-input social" type="text" id="youtube" placeholder="channel">
+  <input class="form-input social" type="text" id="youtube" placeholder="channel" 
+  onkeyup="Getyoutube(this)">
   <button class="btn btn-primary input-group-btn" onclick="rmyoutube()">
     <i class="form-icon icon icon-cross"></i>
   </button>
@@ -119,15 +129,19 @@ const rmyoutube = () => {
 document.getElementById('you').innerHTML = "";
 }
 
+const Getyoutube = (e) => {
+  you = 'https://www.youtube.com/'+e.value;
+  }
+
 const github = () => {
-document.getElementById('git').innerHTML += 
+document.getElementById('git').innerHTML = 
 `<br>
 <div class="input-group">
   <span class="input-group-addon">
     <i class="fa fa-github fa-lg form-icon" aria-hidden="true"></i>
     github.com/
   </span> 
-  <input class="form-input social" type="text" id="github" placeholder="BrayanCorpse" name="github">
+  <input class="form-input social" type="text" id="github" placeholder="BrayanCorpse" name="github" onkeyup="Getgithub(this)">
   <button class="btn btn-primary input-group-btn">
     <i class="form-icon icon icon-cross" onclick="rmgithub()"></i>
   </button>
@@ -137,6 +151,10 @@ document.getElementById('git').innerHTML +=
 const rmgithub = () => {
 document.getElementById('git').innerHTML = "";
 }
+
+const Getgithub = (e) => {
+  git = 'https://github.com/'+e.value;
+  }
 
 function fileGenerator(){
 
@@ -211,7 +229,6 @@ function fileGenerator(){
       </div>
     </div>
     <div class="tile-action text-center" id="social-links">
-     aqui van los iconos de redes sociales
     </div>
   </div>
   <div class="panel-footer">
@@ -222,11 +239,32 @@ function fileGenerator(){
 <button class="btn btn-default btn-block" data-clipboard-target="#generate" id="copy">Copiar</button>`;
 
 document.getElementById('social-links').innerHTML =
-`${face 
+` ${face 
   ? `<a href="${face}" rel="noopener noreferrer" target="_blank">
-      <img src="img/face.png" alt="" width="25" height="25" style="background: ${color};">
+      <img src="img/face.png" alt="" width="22" height="22" style="background: ${color};">
     </a>`
-  : ''}`;
+  : ''}
+  ${insta 
+    ? `<a href="${insta}" rel="noopener noreferrer" target="_blank">
+        <img src="img/instagram.png" alt="" width="20" height="20" style="background: ${color};">
+      </a>`
+    : ''}
+  ${twitt 
+    ? `<a href="${twitt}" rel="noopener noreferrer" target="_blank">
+        <img src="img/twitter.png" alt="" width="20" height="20" style="background: ${color};">
+      </a>`
+    : ''}   
+  ${you 
+    ? `<a href="${you}" rel="noopener noreferrer" target="_blank">
+        <img src="img/youtube.png" alt="" width="25" height="20" style="background: ${color};">
+      </a>`
+    : ''}  
+  ${git 
+    ? `<a href="${git}" rel="noopener noreferrer" target="_blank">
+        <img src="img/github.png" alt="" width="20" height="20" style="background: ${color};">
+      </a>`
+    : ''}  
+  `;
 
 }
 
@@ -242,19 +280,6 @@ clipboard.on('error', function(e) {
 	console.log(e);
 });
 
-
-
-
-
-// const Capturar = () => {
-//     let arraySave = [];   
-//     let Social = document.getElementsByClassName("social");     
-//     for (var i = 0; i < Social.length; i++) {    
-//         arraySave[i] = Social[i].value;
-//         console.log (arraySave[i]); 
-//         document.getElementById('social').innerHTML += arraySave[i] + '<br>';     
-//         }       
-//     }
 
 
 
