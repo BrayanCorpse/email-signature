@@ -1,11 +1,3 @@
-// let language = navigator.language || navigator.browserLanguage;
-// if (language === 'en-US') {
-//   alert("el idioma es Ingles");
-// }
-// else {
-//   alert("el idioma es Español")
-// }
-
 let face;
 
 let insta;
@@ -16,19 +8,135 @@ let you;
 
 let git;
 
+const darkMode = () => {
+
+  let element = document.body;
+  let bg1 = document.getElementById('hero');
+  let bg2 = document.getElementById('empty');
+  let mode = document.getElementById('mode');
+  element.classList.toggle("dark-card");
+  bg1.classList.toggle("dark-mode");
+  bg2.classList.toggle("dark-mode");
+
+  if(document.body.classList.contains('dark-card')){
+     mode.src = "img/eclipse.svg";
+  }
+  else{
+    mode.src = "img/sun.svg"
+  }
+
+}
+
+function Capitalletters(e){
+
+  e.value = e.value.toUpperCase();
+
+}
+
+const lowerCase = (e) => {
+  e.value = e.value.toLowerCase();
+}
+
+const facebook = () => {
+  document.getElementById('face').innerHTML = 
+  `<br>
+  <div class="input-group">
+    <span class="input-group-addon">
+      <i class="fa fa-facebook fa-lg form-icon" aria-hidden="true"></i>
+      facebook.com/
+    </span> 
+    <input class="form-input social" type="text" id="facebook" placeholder="bryan.manzanocortes" onkeyup="Getfacebook(this)">
+    <button class="btn btn-primary input-group-btn" onclick="rmfacebook()">
+      <i class="form-icon icon icon-cross"></i>
+    </button>
+  </div>`;
+}
+
+const rmfacebook = () => {
+  document.getElementById('face').innerHTML = "";
+}
+
+const Getfacebook = (e) => {
+  face = 'https://www.facebook.com/'+e.value;
+  }
 
 
-let clipboard = new Clipboard('.btn');
+const instagram = () => {
+document.getElementById('insta').innerHTML = 
+`<br>
+<div class="input-group">
+  <span class="input-group-addon">
+    <i class="fa fa-instagram fa-lg form-icon" aria-hidden="true"></i>
+    instagram.com/
+  </span> 
+  <input class="form-input social" type="text" id="instagram" placeholder="bryan.devcode">
+  <button class="btn btn-primary input-group-btn" onclick="rminstagram()">
+    <i class="form-icon icon icon-cross"></i>
+  </button>
+</div>`;
+}
 
-clipboard.on('success', function(e) {
-	let copy = document.getElementById('copy');
-  copy.innerHTML = "Copiado!";
-  copy.classList.toggle("btn-primary");
-});
+const rminstagram = () => {
+document.getElementById('insta').innerHTML = "";
+}
 
-clipboard.on('error', function(e) {
-	console.log(e);
-});
+
+const twitter = () => {
+document.getElementById('twi').innerHTML = 
+`<br>
+<div class="input-group">
+  <span class="input-group-addon">
+    <i class="fa fa-twitter fa-lg form-icon" aria-hidden="true"></i>
+    twitter.com/
+  </span> 
+  <input class="form-input social" type="text" id="twitter" placeholder="BrayanCorpsee">
+  <button class="btn btn-primary input-group-btn" onclick="rmtwitter()">
+    <i class="form-icon icon icon-cross"></i>
+  </button>
+</div>`;
+}
+
+const rmtwitter = () => {
+document.getElementById('twi').innerHTML = "";
+}
+
+const youtube = () => {
+document.getElementById('you').innerHTML = 
+`<br>
+<div class="input-group">
+  <span class="input-group-addon">
+    <i class="fa fa-youtube-play fa-lg form-icon" aria-hidden="true"></i>
+    youtube.com/
+  </span> 
+  <input class="form-input social" type="text" id="youtube" placeholder="channel">
+  <button class="btn btn-primary input-group-btn" onclick="rmyoutube()">
+    <i class="form-icon icon icon-cross"></i>
+  </button>
+</div>`;
+}
+
+const rmyoutube = () => {
+document.getElementById('you').innerHTML = "";
+}
+
+const github = () => {
+document.getElementById('git').innerHTML += 
+`<br>
+<div class="input-group">
+  <span class="input-group-addon">
+    <i class="fa fa-github fa-lg form-icon" aria-hidden="true"></i>
+    github.com/
+  </span> 
+  <input class="form-input social" type="text" id="github" placeholder="BrayanCorpse" name="github">
+  <button class="btn btn-primary input-group-btn">
+    <i class="form-icon icon icon-cross" onclick="rmgithub()"></i>
+  </button>
+</div>`;
+}
+
+const rmgithub = () => {
+document.getElementById('git').innerHTML = "";
+}
 
 function fileGenerator(){
 
@@ -65,9 +173,7 @@ function fileGenerator(){
         <div class="tile-subtitle">${phone}</div>
       </div>
       <div class="tile-action">
-        <button class="btn btn-link btn-action btn-lg tooltip tooltip-left" data-tooltip="Phone">
-          <i class="fa fa-phone" aria-hidden="true" style="color: ${color};"></i>
-        </button>
+        <img src="/img/phone.png" alt="" width="30" height="30" style="background: ${color};">
       </div>
     </div>
     <div class="tile tile-centered">
@@ -76,9 +182,7 @@ function fileGenerator(){
         <div class="tile-subtitle">${location}</div>
       </div>
       <div class="tile-action">
-        <button class="btn btn-link btn-action btn-lg tooltip tooltip-left"  data-tooltip="Location">
-          <i class="icon icon-location" style="color: ${color};"></i>
-        </button>
+        <img src="/img/location.png" alt="" width="30" height="30" style="background: ${color};">
       </div>
     </div>
     <div class="tile tile-centered">
@@ -89,9 +193,7 @@ function fileGenerator(){
         </div>
       </div>
       <div class="tile-action">
-        <button class="btn btn-link btn-action btn-lg tooltip tooltip-left"  data-tooltip="Web-site">
-          <i class="icon icon-link" style="color: ${color};"></i>
-        </button>
+        <img src="/img/web.png" alt="" width="30" height="30" style="background: ${color};">
       </div>
     </div>
     <div class="tile tile-centered">
@@ -100,32 +202,16 @@ function fileGenerator(){
         <div class="tile-subtitle">${linkedin}</div>
       </div>
       <div class="tile-action">
-        <button class="btn btn-link btn-action btn-lg tooltip tooltip-left"  data-tooltip="Linkedin">
-          <i class="fa fa-linkedin" aria-hidden="true" style="color: ${color};"></i>
-        </button>
-      </div>
+      <img src="/img/linkedin.png" alt="" width="30" height="30" style="background: ${color};">
+    </div>
     </div>
     <div class="tile tile-centered mb-1">
       <div class="tile-content">
         <div class="tile-title text-bold">social media</div>
       </div>
     </div>
-    <div class="tile-action text-center">
-      <a href="${face}" class="mr-2">
-        <img src="https://i.ibb.co/NxyZDjz/face.png" alt="" width="20" height="20">
-      </a>
-      <a href="${insta}" class="mr-2">
-        <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
-      </a>
-      <a href="${twitt}" class="mr-2">
-        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
-      </a>
-      <a href="${you}" class="mr-2">
-        <i class="fa fa-youtube-play fa-lg" aria-hidden="true"></i>
-      </a>
-      <a href="${git}">
-        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
-      </a>
+    <div class="tile-action text-center" id="social-links">
+     aqui van los iconos de redes sociales
     </div>
   </div>
   <div class="panel-footer">
@@ -135,134 +221,29 @@ function fileGenerator(){
 <br>
 <button class="btn btn-default btn-block" data-clipboard-target="#generate" id="copy">Copiar</button>`;
 
+document.getElementById('social-links').innerHTML =
+`${face 
+  ? `<a href="${face}" rel="noopener noreferrer" target="_blank">
+      <img src="/img/face.png" alt="" width="25" height="25" style="background: ${color};">
+    </a>`
+  : ''}`;
 
 }
 
+let clipboard = new Clipboard('.btn');
 
-const darkMode = () => {
+clipboard.on('success', function(e) {
+	let copy = document.getElementById('copy');
+  copy.innerHTML = "Copiado!";
+  copy.classList.toggle("btn-primary");
+});
 
-    let element = document.body;
-    let bg1 = document.getElementById('hero');
-    let bg2 = document.getElementById('empty');
-    let mode = document.getElementById('mode');
-    element.classList.toggle("dark-card");
-    bg1.classList.toggle("dark-mode");
-    bg2.classList.toggle("dark-mode");
-
-    if(document.body.classList.contains('dark-card')){
-       mode.src = "img/eclipse.svg";
-    }
-    else{
-      mode.src = "img/sun.svg"
-    }
-
-}
-
-function capitalletters(e){
-
-  e.value = e.value.toUpperCase();
-
-}
-
-const facebook = () => {
-    document.getElementById('face').innerHTML = 
-    `<br>
-    <div class="input-group">
-      <span class="input-group-addon">
-        <i class="fa fa-facebook fa-lg form-icon" aria-hidden="true"></i>
-        facebook.com/
-      </span> 
-      <input class="form-input social" type="text" id="facebook" placeholder="bryan.manzanocortes">
-      <button class="btn btn-primary input-group-btn" onclick="rmfacebook()">
-        <i class="form-icon icon icon-cross"></i>
-      </button>
-    </div>`;
-}
-
-const rmfacebook = () => {
-    document.getElementById('face').innerHTML = "";
-}
-
-const instagram = () => {
-  document.getElementById('insta').innerHTML = 
-  `<br>
-  <div class="input-group">
-    <span class="input-group-addon">
-      <i class="fa fa-instagram fa-lg form-icon" aria-hidden="true"></i>
-      instagram.com/
-    </span> 
-    <input class="form-input social" type="text" id="instagram" placeholder="bryan.devcode">
-    <button class="btn btn-primary input-group-btn" onclick="rminstagram()">
-      <i class="form-icon icon icon-cross"></i>
-    </button>
-  </div>`;
-}
-
-const rminstagram = () => {
-  document.getElementById('insta').innerHTML = "";
-}
+clipboard.on('error', function(e) {
+	console.log(e);
+});
 
 
-const twitter = () => {
-  document.getElementById('twi').innerHTML = 
-  `<br>
-  <div class="input-group">
-    <span class="input-group-addon">
-      <i class="fa fa-twitter fa-lg form-icon" aria-hidden="true"></i>
-      twitter.com/
-    </span> 
-    <input class="form-input social" type="text" id="twitter" placeholder="BrayanCorpsee">
-    <button class="btn btn-primary input-group-btn" onclick="rmtwitter()">
-      <i class="form-icon icon icon-cross"></i>
-    </button>
-  </div>`;
-}
 
-const rmtwitter = () => {
-  document.getElementById('twi').innerHTML = "";
-}
-
-const youtube = () => {
-  document.getElementById('you').innerHTML = 
-  `<br>
-  <div class="input-group">
-    <span class="input-group-addon">
-      <i class="fa fa-youtube-play fa-lg form-icon" aria-hidden="true"></i>
-      youtube.com/
-    </span> 
-    <input class="form-input social" type="text" id="youtube" placeholder="channel">
-    <button class="btn btn-primary input-group-btn" onclick="rmyoutube()">
-      <i class="form-icon icon icon-cross"></i>
-    </button>
-  </div>`;
-}
-
-const rmyoutube = () => {
-  document.getElementById('you').innerHTML = "";
-}
-
-const github = () => {
-  document.getElementById('git').innerHTML += 
-  `<br>
-  <div class="input-group">
-    <span class="input-group-addon">
-      <i class="fa fa-github fa-lg form-icon" aria-hidden="true"></i>
-      github.com/
-    </span> 
-    <input class="form-input social" type="text" id="github" placeholder="BrayanCorpse" name="github">
-    <button class="btn btn-primary input-group-btn">
-      <i class="form-icon icon icon-cross" onclick="rmgithub()"></i>
-    </button>
-  </div>`;
-}
-
-const rmgithub = () => {
-  document.getElementById('git').innerHTML = "";
-}
-
-// const Getgithub = (e) => {
-//   git = e.value;
-//   }
 
 
 // const Capturar = () => {
