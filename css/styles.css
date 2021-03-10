@@ -71,7 +71,7 @@ input {
 	color: #F7F8F9;
   }
 
-  .dark-card {
+  .dark-hero {
 	background: #393e46 !important;
 	color: #F7F8F9;
   }
@@ -79,6 +79,11 @@ input {
     position: relative;
     top: 8px;
 	font-size: 1.2rem;
+}
+
+.white-panel {
+	background: #FFFFFF !important;
+	color: #3B4351 !important;
 }
 
 .fa {

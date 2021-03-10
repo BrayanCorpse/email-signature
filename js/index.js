@@ -14,12 +14,15 @@ const darkMode = () => {
   let bg1 = document.getElementById('hero');
   let bg2 = document.getElementById('empty');
   let mode = document.getElementById('mode');
-  element.classList.toggle("dark-card");
+  element.classList.toggle("dark-hero");
   bg1.classList.toggle("dark-mode");
-  bg2.classList.toggle("dark-mode");
+  bg2.classList.toggle("dark-mode");     
+  
 
-  if(document.body.classList.contains('dark-card')){
+
+  if(document.body.classList.contains('dark-mode')){
      mode.src = "img/eclipse.svg";
+
   }
   else{
     mode.src = "img/sun.svg"
@@ -169,7 +172,7 @@ function fileGenerator(){
   let color = document.querySelector('input[name="color"]:checked').value;
 
   document.getElementById('signature').innerHTML = 
-  `<div class="panel" style="border: .1rem solid ${color};">
+  `<div class="panel white-panel" id="panel" style="border: .2rem solid ${color};">
   <div class="panel-header text-center">
     <figure class="avatar avatar-lg" style="background-color: ${color};">
       <h6 class="b-avatar">${nickname}</h6>
@@ -178,9 +181,9 @@ function fileGenerator(){
     <div class="panel-subtitle">${desc}</div>
   </div>
   <nav class="panel-nav">
-    <ul class="tab tab-block">
+    <ul class="tab tab-block"  style="margin: -0.7rem 0 .15rem 0 !important;">
       <li class="tab-item active">
-        <a href="#panels" style="border-bottom: .1rem solid ${color}; color: ${color};">${profile}</a>
+        <a href="#!" style="border-bottom: .1rem solid ${color}; color: ${color};">${profile}</a>
       </li>
     </ul>
   </nav>
@@ -191,7 +194,7 @@ function fileGenerator(){
         <div class="tile-subtitle">${phone}</div>
       </div>
       <div class="tile-action">
-        <img src="img/phone.png" alt="" width="30" height="30" style="background: ${color};">
+        <img src="img/phone.png" alt="" width="30" height="25" style="background: ${color};">
       </div>
     </div>
     <div class="tile tile-centered">
@@ -200,7 +203,7 @@ function fileGenerator(){
         <div class="tile-subtitle">${location}</div>
       </div>
       <div class="tile-action">
-        <img src="img/location.png" alt="" width="30" height="30" style="background: ${color};">
+        <img src="img/location.png" alt="" width="30" height="25" style="background: ${color};">
       </div>
     </div>
     <div class="tile tile-centered">
